@@ -14,7 +14,7 @@ apply plugin: 'application'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
-    mavenCentral()
+    jcenter()
 }
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
