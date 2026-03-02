@@ -1,14 +1,29 @@
 apply plugin: 'java'
-apply plugin: 'application'
+apply plugin: 'maven'
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+description = """2023MavenToGradle"""
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+
 
 repositories {
-    mavenCentral()
+        
+     maven { url "https://repo.maven.apache.org/maven2" }
 }
 
 dependencies {
-    implementation 'com.google.guava:guava:23.0'
-    implementation 'commons-io:commons-io:2.21.0'
-    testImplementation 'junit:junit:4.13.2'
+    testCompile group: 'junit', name: 'junit', version:'3.8.1'
+    jar{
+	manifest{
+		attributes(
+			'Main-Class':'com.example.App'
+			)
+		
 }
-
-mainClassName = 'App'
+}
+}
