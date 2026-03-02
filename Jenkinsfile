@@ -7,7 +7,7 @@ pipeline{
 	stages{
 		stage('Checkout'){
 			steps{
-			git branch: 'main', url:'https://github.com/Gurukiran-H-S/2023GradleApp.git'
+			git branch: 'main', url:'https://github.com/LikithReddy0409/2023MyGradle.git'
 			}
 		}
 		stage('Build'){
